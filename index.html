@@ -8,7 +8,7 @@
   </head>
   <body onload="render()">
     <header>
-            <!-- Header/Navigation Section -->
+      <!-- Header/Navigation Section -->
       <section class="header-section">
         <div class="logo widescreen">
           <a href="./index.html" class="logo-button">
@@ -23,51 +23,46 @@
     </header>
 
     <!-- Headline Section -->
-     <div class="content">
-    <section class="headline bg-color">
-      <div class="widescreen">
-        <h1>Dein privates Fotoalbum</h1>
-      </div>
-    </section>
+    <div class="content">
+      <section class="headline bg-color">
+        <div class="widescreen">
+          <h1>Dein privates Fotoalbum</h1>
+        </div>
+      </section>
 
-    <!-- Gallary Section -->
-    <section class="gallary">
-      <div class="widescreen">
-        <div class="pic-alighn">
-      </div>
-      </div>
-    </section>
+      <!-- Gallary Section -->
+      <section class="gallary">
+        <div class="widescreen">
+          <div class="pic-alighn" id="gallery-content"></div>
+        </div>
+      </section>
     </div>
     <!-- Overlay Section -->
-    <section class="overlay d_none">
-      <div class="overlay-dialog">
-        <div class="overlay-headline">
-        <h2>DESCRIPTION</h2>
-         <button class="close-btn" onclick="">✕</button>
-        </div>
-        <div class="overlay-img">
-        <img src="./assets/Denny.webp" alt="Bildanzeige" />
-        </div>
-        <div class="overlay-buttons">
-
-        </div>     
-      </div>
-    </section>
+    <section class="overlay d_none" id="overlay">
+  <div class="overlay-dialog">
+    <div class="overlay-headline" id="overlay-description">
+    </div>
+    <div class="overlay-img" id="overlay-image">
+    </div>
+    <div class="overlay-buttons" id="overlay-footer">
+    </div>
+  </div>
+</section>
 
     <!-- Footer Section -->
-     <footer>
-        <section class="footer-sec">
-            <div class="widescreen">
-        <a href="./index.html" class="logo-button">
+    <footer>
+      <section class="footer-sec">
+        <div class="widescreen">
+          <a href="./index.html" class="logo-button">
             <img
               class="logo-img"
               src="./assets/Fotogram_Logo.svg"
               alt="Logo mit Aufschrift Fotogram"
             />
           </a>
-          </div>
-        </section>
-     </footer>
+        </div>
+      </section>
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>

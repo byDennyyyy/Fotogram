@@ -45,7 +45,7 @@ body {
 .header-section {
     background-color: rgb(18, 18, 58);
     position: relative;
-    z-index: 110;
+    z-index: 90;
 }
 
 .logo-img {
@@ -117,7 +117,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(128, 128, 128, 0.685);
-  z-index: 100;
+  z-index: 120;
 
   
   display: flex;
@@ -144,9 +144,18 @@ body {
 .overlay-headline {
   width: 100%;
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(41, 41, 100);
+}
+
+.overlay-headline h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: left;
+  margin: 0;
 }
 
 .overlay-img {                       
@@ -174,4 +183,138 @@ body {
 
 .close-btn:hover {
   opacity: 0.7;
+}
+
+.overlay-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  box-sizing: border-box;
+}
+
+.nav-btn {
+  background-color: rgb(41, 41, 100);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.nav-btn:hover {
+  background-color: rgb(70, 70, 150);
+}
+
+.image-counter {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+  .overlay-dialog {
+    width: 90%;
+    height: 75%;
+    padding: 16px;
+  }
+
+  .overlay-headline h2 {
+    font-size: 1.4rem;
+  }
+
+  .overlay-img img {
+    max-height: 55vh; 
+    max-width: 95%;
+    border-radius: 14px;
+  }
+
+  .nav-btn {
+    font-size: 18px;
+    padding: 8px 14px;
+  }
+
+  .image-counter {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .overlay-dialog {
+    width: 95%;
+    height: 80%;
+    padding: 12px;
+  }
+
+  .overlay-headline {
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    border-bottom: none;
+  }
+
+  .overlay-headline h2 {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    font-size: 24px;
+  }
+
+  .overlay-img {
+    padding: 6px; 
+  }
+
+  .overlay-img img {
+    max-height: 50vh;
+    border-radius: 12px;
+    object-fit: contain;
+  }
+
+  .overlay-buttons {
+    padding: 8px 16px;
+  }
+
+  .nav-btn {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+  .image-counter {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .overlay-dialog {
+    width: 96%;
+    height: 82%;
+    padding: 8px;
+  }
+
+  .overlay-headline h2 {
+    font-size: 1rem;
+  }
+
+  .nav-btn {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .image-counter {
+    font-size: 0.85rem;
+  }
+
+  .overlay-img img {
+    max-height: 45vh;
+    max-width: 95%;
+    border-radius: 10px;
+  }
 }
