@@ -214,11 +214,15 @@ body {
   font-weight: bold;
 }
 
+.gallary-button:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
 
 @media (max-width: 768px) {
   .overlay-dialog {
     width: 90%;
-    height: 75%;
+    height: 55%;
     padding: 16px;
   }
 
@@ -245,7 +249,7 @@ body {
 @media (max-width: 480px) {
   .overlay-dialog {
     width: 95%;
-    height: 80%;
+    height: 50%;
     padding: 12px;
   }
 
@@ -295,7 +299,7 @@ body {
 @media (max-width: 360px) {
   .overlay-dialog {
     width: 96%;
-    height: 82%;
+    height: 40%;
     padding: 8px;
   }
 
@@ -318,3 +322,4 @@ body {
     border-radius: 10px;
   }
 }
+

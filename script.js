@@ -34,53 +34,32 @@ const gallaryImagesDesc = [
   "Skin von Steven",
 ];
 
+const wrapper = document.querySelector(".overlay")
+
+const overlay = document.getElementById("overlay");
+
 let picIndex = 0;
 
 function render() {
-  let ImageRef = document.getElementById("gallery-content");
-  ImageRef.innerHTML = "";
+  const content = document.querySelector(".pic-alighn");
+  content.innerHTML = "";
 
-  for (let i = 0; i < gallaryImages.length; i++) {
-    ImageRef.innerHTML += getImage(i);
+for (let i = 0; i < gallaryImages.length; i++) {
+    const button = document.createElement("button");
+    button.classList.add("gallary-button");
+    button.onclick = () => { picIndex = i;
+      openOverlay(picIndex);}
+
+    const img = document.createElement("img");
+    img.src = gallaryImages[i];
+    img.alt = gallaryImagesDesc[i];
+    img.classList.add("gallary-pictures");
+
+    button.appendChild(img);
+    content.appendChild(button);
+    overlay.classList.add("d_none");
   }
 }
-
-function getImage(index) {
-  return `
-    <div class="gallary-pictures">
-     <button class="gallary-button" onclick="openOverlay(${index})">          
-  <img src="${gallaryImages[index]}"
-       class="gallery-image"
-       alt="${gallaryImagesDesc[index]}"
-       title="${gallaryImagesDesc[index]}"
-       />
-</button>
-    </div>
-  `;
-}
-// function render() {
-//   const content = document.querySelector(".pic-alighn");
-//   content.innerHTML = "";
-
-//   for (let i = 0; i < gallaryImages.length; i++) {
-//     const button = document.createElement("button");
-//     button.classList.add("gallary-button");
-//     button.onclick = () => { picIndex = i;
-//       openOverlay(picIndex);}
-
-//     const img = document.createElement("img");
-//     img.src = gallaryImages[i];
-//     img.alt = gallaryImagesDesc[i];
-//     img.classList.add("gallary-pictures");
-
-//     button.appendChild(img);
-//     content.appendChild(button);
-//     overlay.classList.add("d_none");
-//   }
-// }
-
-
-const wrapper = document.querySelector(".overlay")
 
 function openOverlay(index) {
   picIndex = index; 
@@ -107,12 +86,9 @@ function openOverlay(index) {
   overlay.classList.remove("d_none");
 }
 
-  function closeDialog(){
+function closeDialog(){
   document.getElementById("overlay").classList.add("d_none");
  }
-
-
- const overlay = document.getElementById("overlay");
 
 overlay.addEventListener("click", (event) => {
  
@@ -121,7 +97,7 @@ overlay.addEventListener("click", (event) => {
   }
 });
 
- function nextImage(){
+function nextImage(){
     picIndex = (picIndex + 1) % gallaryImages.length;
     openOverlay(picIndex);
  }
@@ -131,7 +107,21 @@ function prevImage () {
     openOverlay(picIndex);
 }
 
-
+console.log(`
+          ******       ******
+        **********   **********
+      ************* *************
+     *****************************
+     **********©byDennyy**********
+      ***************************
+        ***********************
+          *******************
+            ***************
+              ***********
+                *******
+                  ***
+                   *
+`);
 
 
 
